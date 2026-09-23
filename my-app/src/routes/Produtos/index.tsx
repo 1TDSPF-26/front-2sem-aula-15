@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import type { tipoProduto } from "../../types/types";
 import { Link } from "react-router";
+import CardProduto from "../../components/CardProduto";
 
 export default function Produtos() {
   document.title = "Home"
@@ -26,7 +27,7 @@ export default function Produtos() {
 
     }
 
-    //carregarProdutos();
+    carregarProdutos();
 
   }, []);
 
@@ -35,6 +36,12 @@ export default function Produtos() {
   return (
     <main>
         <h2>Produtos</h2>
+        <div style={{display: "flex", gap: "16px", flexWrap: "wrap"}}>
+          {produtos.map((produto)=>(
+            <CardProduto key={produto.id} produto={produto}/>
+          ))}
+
+        </div>
 
         <div>
           <table border={1} style={{width: "100%", borderCollapse: "collapse", border: "1px solid black"}}>
