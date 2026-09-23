@@ -34,7 +34,7 @@ export default function Produtos() {
   }, []);
 
   //apresente a lista de produtos em cards, utilizando props
-
+  
   return (
     <main>
         <h2>Produtos</h2>
@@ -67,7 +67,7 @@ export default function Produtos() {
                   <td>{produto.preco}</td>
                   <td>{produto.descricao}</td>
                   <td><img src={produto.avatar} alt={produto.nome} width={40} /></td>
-                  <td><Link to={`/editar-produto/${produto.id}`}> <Editar/> </Link> / <Excluir/> </td>
+                  <td><Link to={`/editar-produto/${produto.id}`}><Editar/></Link> / <Excluir/> </td>
                 </tr>
               ))}
             </tbody>

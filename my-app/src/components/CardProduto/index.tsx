@@ -17,7 +17,7 @@ export default function CardProduto({produto}: Props) {
                 <figcaption>{produto.descricao}</figcaption>
             </figure>
             <div>
-                <span><Link to={`/editar-produto/${produto.id}`}> <Editar/> </Link></span> - <span> <Excluir/> </span>
+                <span><Link to={`/editar-produto/${produto.id}`}><Editar/></Link></span> - <span><Excluir/></span>
                 
             </div>
         </div>
