@@ -2,6 +2,8 @@ import { useEffect, useState } from "react"
 import type { TipoProduto } from "../../types/types";
 import { Link } from "react-router/internal/react-server-client";
 import CardProduto from "../../components/CardProduto";
+import { FaEdit as Editar } from "react-icons/fa";
+import { MdDeleteForever as Excluir } from "react-icons/md";
 
 export default function Produto() {
     //para alterar o titulo da pagina:
@@ -65,7 +67,7 @@ export default function Produto() {
                                 <td>{produto.descricao}</td>
                                 <td><img src={produto.avatar} alt={produto.nome} width={40} /></td>
                                 <td>
-                                    <Link to={`/editar-produtos/${produto.id}`}> EDITAR </Link> / EXCLUIR
+                                    <Link to={`/editar-produtos/${produto.id}`}><Editar/></Link> / <Excluir/>
                                 </td>
                             </tr>
                         ))}
