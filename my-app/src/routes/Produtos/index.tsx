@@ -56,10 +56,9 @@ export default function Produtos() {
                                 <td>{produto.nome}</td>
                                 <td>{produto.preco}</td>
                                 <td>{produto.descricao}</td>
-                                <td><img src={produto.avatar} alt={produto.nome} width={40} /></td>
-                                <td> <Link to={`/editar-produtos-${produto.id}/`}>EDITAR</Link>/ EXCLUIR</td>
+                                <td><img src={produto.avatar} alt={produto.nome} width={40}/></td>
+                                <td><Link to={`/editar-produtos/${produto.id}`}>EDITAR</Link>   / EXCLUIR</td>
                             </tr>
-
                         ))}
                     </tbody>
                     <tfoot>
