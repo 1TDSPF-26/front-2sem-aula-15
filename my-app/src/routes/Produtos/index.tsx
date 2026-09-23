@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import type { TipoProduto } from "../../types/types";
 import { Link } from "react-router/internal/react-server-client";
+import CardProduto from "../../components/CardProduto";
 
 export default function Produto() {
     //para alterar o titulo da pagina:
@@ -38,6 +39,11 @@ export default function Produto() {
     return (
         <main>
             <h2> Produtos</h2>
+            <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}> {produtos.map((produto) => (<CardProduto key={produto.id} produto={produto} />
+            ))}
+            </div>
+
+
             <div>
                 <table border={1} style={{ width: "100%", borderCollapse: "collapse" ,border: "1px solid black" }}>
                     <thead>
