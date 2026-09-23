@@ -1,4 +1,4 @@
-export type TipoProduto = {
+export type tipoProduto = {
   
   "id": string,
     "nome": string,
