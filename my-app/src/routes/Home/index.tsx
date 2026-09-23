@@ -31,7 +31,7 @@ export default function Home() {
   useEffect( ()=>{
 
     async function loadingData(){
-
+        
         try {
             const response = await fetch("https://api.github.com/users");
             
@@ -42,11 +42,13 @@ export default function Home() {
             const data:TipoUsuarioGit[] = await response.json();
             setUsuarios(data);
 
-        } catch (error) {
-            console.error(error);
-        }
-}
+       } catch (error) {
+        console.error(error);
+       }
+       
+    }
 
+    loadingData();
 
   },[] );
 
@@ -55,11 +57,12 @@ export default function Home() {
       <h2>Home</h2>
       <div>
         <ul>
-            {usuarios.map((u, i)=>(
-                <li key={i}>{u.id} - {u.login} - <img src={u.avatar_url} alt={u.login} width={30}/></li>
+            {usuarios.map((u,i)=>(
+                    <li key={i}>{u.id} - {u.login} - <img src={u.avatar_url} alt={u.login} width={30}/></li>
             ))}
         </ul>
       </div>
+
     </main>
   );
 }
