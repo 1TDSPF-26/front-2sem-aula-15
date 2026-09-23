@@ -5,6 +5,9 @@ import type { TipoProduto } from "../../types/types";
 import { Link } from 'react-router';
 import CardProduto from "../../components/CardProduto";
 
+import { FaEdit, FaRegTrashAlt } from "react-icons/fa";
+
+
 
 export default function Produtos() {
 
@@ -91,7 +94,9 @@ export default function Produtos() {
                 <td><img src={produto.avatar} alt={produto.nome} width={80}/>
                 </td>
                 
-                <td><Link to={`/editar-produtos/${produto.id}`}>EDITAR</Link>/EXCLUIR</td>
+                <td><Link to={`/editar-produtos/${produto.id}`}><FaEdit /></Link> <FaRegTrashAlt />
+                
+                </td>
 
 
               </tr>
