@@ -2,6 +2,8 @@ import { useEffect, useState } from "react"
 import type { tipoProduto } from "../../types/types";
 import { Link } from "react-router";
 import CardProduto from "../../components/CardProduto";
+import { FaEdit as Editar } from "react-icons/fa";
+import { MdDeleteForever as Excluir } from "react-icons/md";
 
 export default function Produtos() {
   document.title = "Home"
@@ -65,7 +67,7 @@ export default function Produtos() {
                   <td>{produto.preco}</td>
                   <td>{produto.descricao}</td>
                   <td><img src={produto.avatar} alt={produto.nome} width={40} /></td>
-                  <td><Link to={`/editar-produto/${produto.id}`}>EDITAR</Link> / EXCLUIR</td>
+                  <td><Link to={`/editar-produto/${produto.id}`}> <Editar/> </Link> / <Excluir/> </td>
                 </tr>
               ))}
             </tbody>
