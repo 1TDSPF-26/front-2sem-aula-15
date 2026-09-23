@@ -3,5 +3,6 @@ export type tipoProduto = {
     nome: string,
     preco: number,
     descricao: string,
+    avatar: string
 }
 
